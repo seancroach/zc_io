@@ -1,12 +1,17 @@
 [package]
 name = "zc_io"
-version = "0.1.0"
-edition = "2021"
+version = "0.1.0" # update html_root_url in src/lib.rs and version in README.md
 
-# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+authors = ["Sean C. Roach <me@seancroach.dev>"]
+categories = ["no-std", "rust-patterns"]
+description = "Simple zero-copy I/O."
+edition = "2021"
+keywords = ["io", "serde", "zero-copy"]
+license = "MIT OR Apache-2.0"
+readme = "README.md"
+repository = "https://github.com/seancroach/zc_io"
 
 [features]
-
 default = ["std"]
 
 std = []
@@ -14,4 +19,3 @@ std = []
 [package.metadata.docs.rs]
 all-features = true
 rustdoc-args = ["--cfg", "doc_cfg"]
-

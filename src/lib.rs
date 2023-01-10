@@ -3,8 +3,13 @@
 //!
 //! [`no_std`]: https://docs.rust-embedded.org/book/intro/no-std.html
 
-#![cfg_attr(not(feature = "std"), no_std)]
+// zc_io types in rustdoc of other crates get linked to here:
+#![doc(html_root_url = "https://docs.rs/serde/1.0.152")]
+// Enable https://doc.rust-lang.org/beta/unstable-book/language-features/doc-cfg.html:
 #![cfg_attr(doc_cfg, feature(doc_cfg))]
+// Support using zc_io without the standard library:
+#![cfg_attr(not(feature = "std"), no_std)]
+// Enable lints:
 #![deny(clippy::pedantic, missing_docs)]
 
 extern crate alloc;
