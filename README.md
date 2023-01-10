@@ -3,9 +3,8 @@ zc_io
 This crate provides a zero-copy `Read` trait and a simplified `Write` trait
 useful for possibly `no_std` environments.
 
-[![Build status]()]()
-[![Crates.io]()]()
-[![Rust]()]()
+[![Build status](https://img.shields.io/github/actions/workflow/status/seancroach/zc_io/ci.yml)](https://github.com/seancroach/zc_io/actions)
+[![Crates.io](https://img.shields.io/crates/v/zc_io)](https://crates.io/crates/zc_io)
 
 ### Documentation
 
