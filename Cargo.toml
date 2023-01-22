@@ -1,6 +1,6 @@
 [package]
 name = "zc_io"
-version = "0.1.0" # update html_root_url in src/lib.rs and version in README.md
+version = "0.1.1" # update html_root_url in src/lib.rs and version in README.md
 
 authors = ["Sean C. Roach <me@seancroach.dev>"]
 categories = ["no-std", "rust-patterns"]

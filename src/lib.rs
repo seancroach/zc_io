@@ -4,7 +4,7 @@
 //! [`no_std`]: https://docs.rust-embedded.org/book/intro/no-std.html
 
 // zc_io types in rustdoc of other crates get linked to here:
-#![doc(html_root_url = "https://docs.rs/serde/1.0.152")]
+#![doc(html_root_url = "https://docs.rs/zc_io/0.1.1")]
 // Enable https://doc.rust-lang.org/beta/unstable-book/language-features/doc-cfg.html:
 #![cfg_attr(doc_cfg, feature(doc_cfg))]
 // Support using zc_io without the standard library:
