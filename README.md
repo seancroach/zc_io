@@ -18,7 +18,7 @@ so:
 
 ```toml
 [dependencies]
-zc_io = "0.1"
+zc_io = "0.2"
 ```
 
 ### `no_std` crates
@@ -28,7 +28,7 @@ in a `no_std` context, add the following to your `Cargo.toml`:
 
 ```toml
 [dependencies]
-zc_io = { version = "0.1", default-features = false }
+zc_io = { version = "0.2", default-features = false }
 ```
 
 ### License
