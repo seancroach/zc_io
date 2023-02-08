@@ -4,7 +4,7 @@
 //! [`no_std`]: https://docs.rust-embedded.org/book/intro/no-std.html
 
 // zc_io types in rustdoc of other crates get linked to here:
-#![doc(html_root_url = "https://docs.rs/zc_io/0.1.1")]
+#![doc(html_root_url = "https://docs.rs/zc_io/0.2.0")]
 // Enable https://doc.rust-lang.org/beta/unstable-book/language-features/doc-cfg.html:
 #![cfg_attr(doc_cfg, feature(doc_cfg))]
 // Support using zc_io without the standard library:
@@ -107,7 +107,7 @@ pub trait Read<'data> {
 
 impl<'data, R> Read<'data> for &mut R
 where
-    R: Read<'data>,
+    R: ?Sized + Read<'data>,
 {
     #[inline]
     fn read_next(&mut self) -> Result<u8> {
@@ -127,7 +127,7 @@ where
 
 impl<'data, R> Read<'data> for Box<R>
 where
-    R: Read<'data>,
+    R: ?Sized + Read<'data>,
 {
     #[inline]
     fn read_next(&mut self) -> Result<u8> {
@@ -415,7 +415,7 @@ pub trait Write {
 
 impl<W> Write for &mut W
 where
-    W: Write,
+    W: ?Sized + Write,
 {
     #[inline]
     fn write(&mut self, buf: &[u8]) -> Result<usize> {
@@ -435,7 +435,7 @@ where
 
 impl<W> Write for Box<W>
 where
-    W: Write,
+    W: ?Sized + Write,
 {
     #[inline]
     fn write(&mut self, buf: &[u8]) -> Result<usize> {
